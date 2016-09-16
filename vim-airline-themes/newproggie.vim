@@ -1,50 +1,58 @@
 let g:airline#themes#newproggie#palette = {}
 
-" Color palette
-let s:cterm_termbg    = 237  " Background for branch and file format blocks
+" Background/foreground for branch and file format blocks
+let s:cterm_termbg    = 237
 let s:gui_termbg      = '#5F5F5F'
-let s:cterm_termfg    = 7    " Foreground for branch and file format blocks
+let s:cterm_termfg    = 7
 let s:gui_termfg      = '#B0B0B0'
 
-let s:cterm_termbg2   = 234  " Background for middle block
-let s:gui_termbg2     = '#1C1C1C'
-let s:cterm_termfg2   = 39   " Foreground for middle block
+" Background/foreground for middle block
+let s:cterm_termbg2   = 234
+let s:gui_termbg2     = '#161616'
+let s:cterm_termfg2   = 39
 let s:gui_termfg2     = '#F5F5F5'
 
-let s:cterm_normalbg  = 4    " Background for normal mode and file position blocks
+" Background/foreground for normal mode and file position blocks
+let s:cterm_normalbg  = 4
 let s:gui_normalbg    = '#569CD6'
-let s:cterm_normalfg  = 15   " Foreground for normal mode and file position blocks
+let s:cterm_normalfg  = 15
 let s:gui_normalfg    = '#F7F7F7'
 
-let s:cterm_insertbg  = 2    " Background for insert mode and file position blocks
-let s:gui_insertbg    = '#6A9C6C'
-let s:cterm_insertfg  = 15   " Foreground for insert mode and file position blocks
+" Background/foreground for insert mode and file position blocks
+let s:cterm_insertbg  = 2
+let s:gui_insertbg    = '#608B4E'
+let s:cterm_insertfg  = 15
 let s:gui_insertfg    = '#F7F7F7'
 
-let s:cterm_visualbg  = 3    " Background for visual mode and file position blocks
+" Background/foreground for visual mode and file position blocks
+let s:cterm_visualbg  = 3
 let s:gui_visualbg    = '#D69831'
-let s:cterm_visualfg  = 15   " Foreground for visual mode and file position blocks
+let s:cterm_visualfg  = 15
 let s:gui_visualfg    = '#F7F7F7'
 
-let s:cterm_replacebg = 1    " Background for replace mode and file position blocks
+" Background/foreground for replace mode and file position blocks
+let s:cterm_replacebg = 1
 let s:gui_replacebg   = '#A94744'
-let s:cterm_replacefg = 15   " Foreground for replace mode and file position blocks
+let s:cterm_replacefg = 15
 let s:gui_replacefg   = '#F7F7F7'
 
-let s:cterm_alert     = 9    " Modified file alert color
+" Modified file alert color
+let s:cterm_alert     = 9
 let s:gui_alert       = '#E09690'
 
-let s:cterm_inactivebg = 0   " Background for inactive mode
-let s:gui_inactivebg   = '#1D2021'
-let s:cterm_inactivefg = 8   " Foreground for inactive mode
-let s:gui_inactivefg   = '#3C3F41'
+" Background/foreground for inactive mode
+let s:cterm_inactivebg = 0
+let s:gui_inactivebg   = '#161616'
+let s:cterm_inactivefg = 8
+let s:gui_inactivefg   = '#3C3C3C'
 
 " Branch and file format
-let s:BB = [s:gui_termfg, s:gui_termbg, s:cterm_termfg, s:cterm_termbg] " Branch and file format blocks
+let s:BB = [s:gui_termfg, s:gui_termbg, s:cterm_termfg, s:cterm_termbg]
 
-" Normal mode
-let s:N1 = [s:gui_normalfg, s:gui_normalbg, s:cterm_normalfg, s:cterm_normalbg] " Outside blocks in normal mode
-let s:N2 = [s:gui_termfg2, s:gui_termbg2, s:cterm_normalbg, s:cterm_termbg2]     " Middle block
+" Outside blocks in normal mode
+let s:N1 = [s:gui_normalfg, s:gui_normalbg, s:cterm_normalfg, s:cterm_normalbg]
+" Middle block
+let s:N2 = [s:gui_termfg2, s:gui_termbg2, s:cterm_normalbg, s:cterm_termbg2]
 let g:airline#themes#newproggie#palette.normal = airline#themes#generate_color_map(s:N1, s:BB, s:N2)
 let g:airline#themes#newproggie#palette.normal_modified = {'airline_c': [s:gui_alert, s:gui_termbg2, s:cterm_alert, s:cterm_termbg2, 'bold'] ,}
 
